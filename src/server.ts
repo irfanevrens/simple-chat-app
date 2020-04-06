@@ -20,8 +20,8 @@ export class Server {
     private initialize(): void {
         this.app = express();
         this.httpsServer = createServerS({
-            key: fs.readFileSync('/etc/letsencrypt/live/meet.narakadmei.com/privkey.pem'),
-            cert: fs.readFileSync('/etc/letsencrypt/live/meet.narakadmei.com/cert.pem')
+            key: fs.readFileSync('/etc/letsencrypt/live/meet.narakademi.com/privkey.pem'),
+            cert: fs.readFileSync('/etc/letsencrypt/live/meet.narakademi.com/cert.pem')
         });
         this.io = socketIO(this.httpsServer);
 
