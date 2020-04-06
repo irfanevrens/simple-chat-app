@@ -22,7 +22,7 @@ export class Server {
         this.httpsServer = createServerS({
             key: fs.readFileSync('/etc/letsencrypt/live/meet.narakademi.com/privkey.pem'),
             cert: fs.readFileSync('/etc/letsencrypt/live/meet.narakademi.com/cert.pem')
-        });
+        }, this.app);
         this.io = socketIO(this.httpsServer);
 
         this.configureApp();
